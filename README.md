@@ -9,6 +9,8 @@ Conditionals (if, else if, else)<br>
 _Day-2_<br>
 Switch Statement<br>
 Loops (for, while, do-while)<br>
+
+_Day-3_<br>
 Functions (basic functions with parameters)<br>
 Function Scope and Variable Hoisting<br>
 Anonymous Functions and Function Expressions<br>
