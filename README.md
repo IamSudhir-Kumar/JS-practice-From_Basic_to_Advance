@@ -8,7 +8,7 @@ Conditionals (if, else if, else)
 
 _Day-2_
 Switch Statement
-Loops (for, while, do-while)
+Loops (for, while, do-while)<br>
 Functions (basic functions with parameters)
 Function Scope and Variable Hoisting
 Anonymous Functions and Function Expressions
