@@ -6,9 +6,9 @@ _Day-1_<br>
 Comparison Operators and Logical Operators<br>
 Conditionals (if, else if, else)<br>
 
-_Day-2_
-Switch Statement
-Loops (for, while, do-while)
+_Day-2_<br>
+Switch Statement<br>
+Loops (for, while, do-while)<br>
 Functions (basic functions with parameters)
 Function Scope and Variable Hoisting
 Anonymous Functions and Function Expressions
