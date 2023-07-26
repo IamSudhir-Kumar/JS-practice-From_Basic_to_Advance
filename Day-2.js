@@ -53,3 +53,5 @@ switch(val){
 }
 
 sequentialSizes(1);
+
+//Free code camp problem 73 (counting cards)
