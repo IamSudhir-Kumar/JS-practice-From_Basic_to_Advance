@@ -9,9 +9,9 @@ Conditionals (if, else if, else)<br>
 _Day-2_<br>
 Switch Statement<br>
 Loops (for, while, do-while)<br>
-Functions (basic functions with parameters)
-Function Scope and Variable Hoisting
-Anonymous Functions and Function Expressions
+Functions (basic functions with parameters)<br>
+Function Scope and Variable Hoisting<br>
+Anonymous Functions and Function Expressions<br>
 Arrays (creating, accessing elements, array methods)
 Array Iteration (forEach, map, filter, reduce)
 Objects (creating, accessing properties, object methods)
