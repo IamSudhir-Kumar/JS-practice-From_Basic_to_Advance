@@ -14,6 +14,8 @@ _Day-3_<br>
 Functions (basic functions with parameters)<br>
 Function Scope and Variable Hoisting<br>
 Anonymous Functions and Function Expressions<br>
+
+_Day-4_<br>
 Arrays (creating, accessing elements, array methods)<br>
 Array Iteration (forEach, map, filter, reduce)<br>
 Objects (creating, accessing properties, object methods)<br>
