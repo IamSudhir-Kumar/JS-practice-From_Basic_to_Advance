@@ -20,6 +20,8 @@ Arrays (creating, accessing elements, array methods)<br>
 Array Iteration (forEach, map, filter, reduce)<br>
 Objects (creating, accessing properties, object methods)<br>
 Object Constructors and Prototypes<br>
+
+_Day-5_<br>
 DOM Manipulation (selecting elements, modifying content)
 Event Handling (click, submit, keypress, etc.)
 Form Validation (basic form validation using JavaScript)
