@@ -22,9 +22,11 @@ Objects (creating, accessing properties, object methods)<br>
 Object Constructors and Prototypes<br>
 
 _Day-5_<br>
-DOM Manipulation (selecting elements, modifying content)
-Event Handling (click, submit, keypress, etc.)
-Form Validation (basic form validation using JavaScript)
+DOM Manipulation (selecting elements, modifying content)<br>
+Event Handling (click, submit, keypress, etc.)<br>
+Form Validation (basic form validation using JavaScript)<br>
+
+_Day-6_ <br>
 Timing Events (setTimeout, setInterval)
 Date and Time Manipulation
 Error Handling (try-catch blocks)
