@@ -27,8 +27,10 @@ Event Handling (click, submit, keypress, etc.)<br>
 Form Validation (basic form validation using JavaScript)<br>
 
 _Day-6_ <br>
-Timing Events (setTimeout, setInterval)
-Date and Time Manipulation
+Timing Events (setTimeout, setInterval)<br>
+Date and Time Manipulation<br>
+
+_Day-7_ <br>
 Error Handling (try-catch blocks)
 JSON Manipulation (parse, stringify)
 Local Storage (storing and retrieving data)
