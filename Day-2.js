@@ -55,3 +55,41 @@ switch(val){
 sequentialSizes(1);
 
 //Free code camp problem 73 (counting cards)
+
+/*Certainly! Both "Switch Statement" and "Loops" are fundamental concepts in JavaScript that can greatly enhance your programming skills. Below are some basic programs to help you master these topics:
+
+**Switch Statement:**
+
+1. Write a program that takes a day number (1 to 7) as input and displays the corresponding day of the week using a switch statement.
+
+2. Create a simple calculator program that takes two numbers and an operator (+, -, *, /) as input. Use a switch statement to perform the calculation based on the chosen operator.
+
+3. Implement a program that takes a month number (1 to 12) as input and displays the corresponding month name using a switch statement.
+
+4. Write a program that takes a letter of the alphabet as input and determines whether it is a vowel or a consonant using a switch statement.
+
+5. Create a grading program that takes a numerical score as input (0 to 100) and assigns a letter grade using a switch statement.
+
+**Loops (for, while, do-while):**
+
+1. Use a for loop to print numbers from 1 to 10.
+
+2. Write a program using a while loop that prints the even numbers from 2 to 20.
+
+3. Implement a program using a do-while loop that repeatedly asks the user to guess a secret number until they guess it correctly.
+
+4. Use a for loop to calculate the sum of the first n natural numbers, where n is taken as input from the user.
+
+5. Write a program that takes a string as input and uses a loop to count the number of vowels (a, e, i, o, u) in the string.
+
+6. Create a program that generates a multiplication table for a given number (up to a certain limit) using a loop.
+
+7. Use a loop to find the factorial of a given number (n!) where n is taken as input from the user.
+
+8. Write a program that prints a pattern of stars using nested loops, such as a pyramid or a triangle.
+
+9. Implement a program that takes an array of numbers and uses a loop to find the maximum and minimum values.
+
+10. Create a program that uses a loop to reverse a given string.
+
+Remember, practice is crucial to mastering these concepts. Experiment with different scenarios and create your own programs using switch statements and various types of loops. As you practice more, you will become more confident in using these constructs effectively in your JavaScript code. Happy coding! */
