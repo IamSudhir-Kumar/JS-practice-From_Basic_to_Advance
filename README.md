@@ -31,10 +31,12 @@ Timing Events (setTimeout, setInterval)<br>
 Date and Time Manipulation<br>
 
 _Day-7_ <br>
-Error Handling (try-catch blocks)
-JSON Manipulation (parse, stringify)
-Local Storage (storing and retrieving data)
-AJAX with Fetch API (making API requests)
+Error Handling (try-catch blocks)<br>
+JSON Manipulation (parse, stringify)<br>
+
+_Day-8_ <br>
+Local Storage (storing and retrieving data)<br>
+AJAX with Fetch API (making API requests)<br>
 Promises and Asynchronous Programming
 Async/Await
 Recursion (writing recursive functions)
