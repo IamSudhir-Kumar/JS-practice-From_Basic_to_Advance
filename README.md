@@ -37,6 +37,8 @@ JSON Manipulation (parse, stringify)<br>
 _Day-8_ <br>
 Local Storage (storing and retrieving data)<br>
 AJAX with Fetch API (making API requests)<br>
+
+_Day-9_ <br>
 Promises and Asynchronous Programming
 Async/Await
 Recursion (writing recursive functions)
