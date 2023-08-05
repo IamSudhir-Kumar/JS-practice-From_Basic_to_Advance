@@ -41,6 +41,8 @@ AJAX with Fetch API (making API requests)<br>
 _Day-9_ <br>
 Promises and Asynchronous Programming
 Async/Await
+
+_Day-10_ <br>
 Recursion (writing recursive functions)
 String Manipulation (reversing, splitting, substrings)
 Regular Expressions (basic pattern matching)
