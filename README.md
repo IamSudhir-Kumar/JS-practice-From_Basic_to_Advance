@@ -2,6 +2,7 @@
 This repository is for practicing and mastering JavScript from basic to advance  
 Content of this repository from day-1 to day-30
 <hr>
+
 _Day-1_<br>
 Comparison Operators and Logical Operators<br>
 Conditionals (if, else if, else)<br>
