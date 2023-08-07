@@ -49,7 +49,10 @@ String Manipulation (reversing, splitting, substrings)
 _Day-11_<br>
 Regular Expressions (basic pattern matching)<br>
 Math Functions (Math.random, Math.floor, etc.)<br>
-Document Object Model (DOM) Traversal
+Document Object Model (DOM) Traversal<br>
+<hr>
+
+_Day-12_<br>
 Creating Dynamic Elements
 Working with Forms (reading and setting form values)
 Mouse Events (mouseover, mouseout, etc.)
