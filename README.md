@@ -1,7 +1,7 @@
 # JS-practice-From_Basic_to_Advance
 This repository is for practicing and mastering JavScript from basic to advance  
 Content of this repository from day-1 to day-30
-
+<hr>
 _Day-1_<br>
 Comparison Operators and Logical Operators<br>
 Conditionals (if, else if, else)<br>
@@ -50,7 +50,7 @@ _Day-11_<br>
 Regular Expressions (basic pattern matching)<br>
 Math Functions (Math.random, Math.floor, etc.)<br>
 Document Object Model (DOM) Traversal<br>
-<hr>
+
 
 _Day-12_<br>
 Creating Dynamic Elements
