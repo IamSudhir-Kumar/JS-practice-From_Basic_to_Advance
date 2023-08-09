@@ -77,42 +77,100 @@ function calculate (a , b ,operator){
      return "Invalid operator"
   }
   }
+//  Implement a program that takes a month number (1 to 12) as input and displays the corresponding month name using a switch statement.
+a = parseInt(prompt("Enter the number"));
+switch (a){
+  case 1:
+   console.log("Jnauary")
+break;
+      case 2:
+   console.log("Febuary")
+break;  case 3:
+   console.log("March")
+break;  case 4:
+   console.log("April")
+break;
+  case 5:
+   console.log("May")
+break;
+      case 2:
+   console.log("June")
+break;  case 3:
+   console.log("July")
+break;  case 4:
+   console.log("August")
+break;
+    case 1:
+   console.log("September")
+break;
+      case 2:
+   console.log("October")
+break;  case 3:
+   console.log("November")
+break;  case 4:
+   console.log("December")
+break;
+  default:
+    console.log("Inalid")
+}
 
+// Write a program that takes a letter of the alphabet as input and determines whether it is a vowel or a consonant using a switch statement.
+a = prompt("Enter the alphabet");
 
-/*Certainly! Both "Switch Statement" and "Loops" are fundamental concepts in JavaScript that can greatly enhance your programming skills. Below are some basic programs to help you master these topics:
+switch(a){
+  case "a":
+  case "e":
+  case "i":
+  case "o":
+  case "u":
+    console.log("Its an Vowel")
+  break;
+  default:
+    console.log("Its a consonant")
+}
 
-**Switch Statement:**
+//  Create a grading program that takes a numerical score as input (0 to 100) and assigns a letter grade using a switch statement.
+const score = parseFloat(prompt("write Down your score"));
+let grades ;
+switch(true){
+  case score >= 90:
+    console.log("A Excellent");
+  break;
+  case score >= 80:
+    console.log("B Good Work KEEP IT uP");
+  break;
+  case score >= 70:
+    console.log("C You should try harder");
+  break;
+  case score >= 60:
+    console.log("D Try Harder");
+  break;
+  default:
+    console.log("Start Studying");
+}
 
-1. Write a program that takes a day number (1 to 7) as input and displays the corresponding day of the week using a switch statement.
+ 
 
-2. Create a simple calculator program that takes two numbers and an operator (+, -, *, /) as input. Use a switch statement to perform the calculation based on the chosen operator.
+// **Loops (for, while, do-while):**
 
-3. Implement a program that takes a month number (1 to 12) as input and displays the corresponding month name using a switch statement.
+// 1. Use a for loop to print numbers from 1 to 10.
 
-4. Write a program that takes a letter of the alphabet as input and determines whether it is a vowel or a consonant using a switch statement.
+// 2. Write a program using a while loop that prints the even numbers from 2 to 20.
 
-5. Create a grading program that takes a numerical score as input (0 to 100) and assigns a letter grade using a switch statement.
+// 3. Implement a program using a do-while loop that repeatedly asks the user to guess a secret number until they guess it correctly.
 
-**Loops (for, while, do-while):**
+// 4. Use a for loop to calculate the sum of the first n natural numbers, where n is taken as input from the user.
 
-1. Use a for loop to print numbers from 1 to 10.
+// 5. Write a program that takes a string as input and uses a loop to count the number of vowels (a, e, i, o, u) in the string.
 
-2. Write a program using a while loop that prints the even numbers from 2 to 20.
+// 6. Create a program that generates a multiplication table for a given number (up to a certain limit) using a loop.
 
-3. Implement a program using a do-while loop that repeatedly asks the user to guess a secret number until they guess it correctly.
+// 7. Use a loop to find the factorial of a given number (n!) where n is taken as input from the user.
 
-4. Use a for loop to calculate the sum of the first n natural numbers, where n is taken as input from the user.
+// 8. Write a program that prints a pattern of stars using nested loops, such as a pyramid or a triangle.
 
-5. Write a program that takes a string as input and uses a loop to count the number of vowels (a, e, i, o, u) in the string.
+// 9. Implement a program that takes an array of numbers and uses a loop to find the maximum and minimum values.
 
-6. Create a program that generates a multiplication table for a given number (up to a certain limit) using a loop.
+// 10. Create a program that uses a loop to reverse a given string.
 
-7. Use a loop to find the factorial of a given number (n!) where n is taken as input from the user.
-
-8. Write a program that prints a pattern of stars using nested loops, such as a pyramid or a triangle.
-
-9. Implement a program that takes an array of numbers and uses a loop to find the maximum and minimum values.
-
-10. Create a program that uses a loop to reverse a given string.
-
-Remember, practice is crucial to mastering these concepts. Experiment with different scenarios and create your own programs using switch statements and various types of loops. As you practice more, you will become more confident in using these constructs effectively in your JavaScript code. Happy coding! */
+// Remember, practice is crucial to mastering these concepts. Experiment with different scenarios and create your own programs using switch statements and various types of loops. As you practice more, you will become more confident in using these constructs effectively in your JavaScript code. Happy coding! */
