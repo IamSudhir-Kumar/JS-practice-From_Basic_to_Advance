@@ -56,6 +56,29 @@ sequentialSizes(1);
 
 //Free code camp problem 73 (counting cards)
 
+//Create a simple calculator program that takes two numbers and an operator (+, -, *, /) as input. Use a switch statement to perform the calculation based on the chosen operator.
+let a = 5;
+let b = 7;
+function calculate (a , b ,operator){
+  switch(operator){
+  case "+":
+    return a + b;
+  case "-":
+    return a - b;
+  case "*":
+    return a * b;
+  case "/":{
+    if (b !== 0)
+    return a / b ;
+  else 
+  return "It is invalid"
+  }
+  default:
+     return "Invalid operator"
+  }
+  }
+
+
 /*Certainly! Both "Switch Statement" and "Loops" are fundamental concepts in JavaScript that can greatly enhance your programming skills. Below are some basic programs to help you master these topics:
 
 **Switch Statement:**
