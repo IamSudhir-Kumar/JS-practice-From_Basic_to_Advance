@@ -154,10 +154,21 @@ switch(true){
 // **Loops (for, while, do-while):**
 
 // 1. Use a for loop to print numbers from 1 to 10.
+let i = 0;
+for (i=0; i<=11 ; i++)
+     {
+       console.log(i)
+     }
 
 // 2. Write a program using a while loop that prints the even numbers from 2 to 20.
+let i = 2;
+while (i <= 20){
+  console.log(i);
+  i+=2;
+}
 
 // 3. Implement a program using a do-while loop that repeatedly asks the user to guess a secret number until they guess it correctly.
+
 
 // 4. Use a for loop to calculate the sum of the first n natural numbers, where n is taken as input from the user.
 
