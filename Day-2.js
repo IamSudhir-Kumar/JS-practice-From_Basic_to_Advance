@@ -168,7 +168,20 @@ while (i <= 20){
 }
 
 // 3. Implement a program using a do-while loop that repeatedly asks the user to guess a secret number until they guess it correctly.
+const secretNumber = 2004;
+let guessedNumber;
+let attempts = 0;
 
+do {
+  guessedNumber = parseInt(prompt("Guess The number"));
+  attempts++;
+
+  if (guessedNumber === secretNumber)  {
+    console.log(`Congo.! you are Right after ${attempts} attempts`);
+  } else {
+    console.log("Better luck next time");
+  } 
+}while (guessedNumber !== secretNumber);
 
 // 4. Use a for loop to calculate the sum of the first n natural numbers, where n is taken as input from the user.
 
