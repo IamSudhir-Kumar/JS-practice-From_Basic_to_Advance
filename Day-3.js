@@ -63,7 +63,15 @@ console.log(a);
 // 1. Write an anonymous function and store it in a variable. Call the function and check its output.
 
 // 2. Create a function expression inside another function and call it from the outer function.
-
+let j = 99;
+function outer(){
+  console.log(j)
+  const iNner = function inner() {
+    return j*j;
+  }
+    console.log(iNner()); //inner dunction
+}
+outer() //outer function
 // 3. Implement a program that uses an anonymous function to calculate the square of a given number.
 fIrst = 44;
 const square = function(num) {
