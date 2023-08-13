@@ -37,6 +37,16 @@ console.log(a);//undefined
 var a = 77;
 console.log(a);//77
 // 2. Create a function that uses both global and local variables to showcase function scope.
+a = 44 ;
+function print(){
+  console.log(a); 
+  a = 77; 
+  function print2() {
+      console.log(a);
+  }
+  print2();// 77
+}
+print(); //44
 
 // 3. Implement a program that modifies a global variable inside a function and observe the changes outside the function.
 
