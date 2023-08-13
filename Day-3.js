@@ -61,7 +61,14 @@ console.log(a);
 // **Anonymous Functions and Function Expressions:**
 
 // 1. Write an anonymous function and store it in a variable. Call the function and check its output.
+
 // 2. Create a function expression inside another function and call it from the outer function.
+
 // 3. Implement a program that uses an anonymous function to calculate the square of a given number.
+fIrst = 44;
+const square = function(num) {
+  return num*num;
+}
+console.log(square(fIrst))
 
 //  */
