@@ -61,7 +61,11 @@ console.log(a);
 // **Anonymous Functions and Function Expressions:**
 
 // 1. Write an anonymous function and store it in a variable. Call the function and check its output.
-
+let r = 2002;
+const print = function(str){
+  console.log(r);
+}
+print();
 // 2. Create a function expression inside another function and call it from the outer function.
 let j = 99;
 function outer(){
