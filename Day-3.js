@@ -49,6 +49,14 @@ function print(){
 print(); //44
 
 // 3. Implement a program that modifies a global variable inside a function and observe the changes outside the function.
+var a = 44; //Global varibale with var
+function modiFy(){
+   a = 77;//global variable modify inside a function
+}
+console.log(a);
+modiFy();
+console.log(a);
+
 
 // **Anonymous Functions and Function Expressions:**
 
