@@ -1,6 +1,4 @@
 // Day-5
-// DOM Manipulation (selecting elements, modifying content)
-// Event Handling (click, submit, keypress, etc.)
-// Form Validation (basic form validation using JavaScript)
-
-
+// String Manipulation (reversing, splitting, substrings)
+// JSON Manipulation (parse, stringify)
+// Math Functions (Math.random, Math.floor, etc.)
