@@ -23,9 +23,9 @@ Objects (creating, accessing properties, object methods)<br>
 Object Constructors and Prototypes<br>
 
 _Day-5_<br>
-DOM Manipulation (selecting elements, modifying content)<br>
-Event Handling (click, submit, keypress, etc.)<br>
-Form Validation (basic form validation using JavaScript)<br>
+String Manipulation (reversing, splitting, substrings)<br>
+JSON Manipulation (parse, stringify)<br>
+Math Functions (Math.random, Math.floor, etc.)<br>
 
 _Day-6_ <br>
 Timing Events (setTimeout, setInterval)<br>
@@ -33,7 +33,6 @@ Date and Time Manipulation<br>
 
 _Day-7_ <br>
 Error Handling (try-catch blocks)<br>
-JSON Manipulation (parse, stringify)<br>
 
 _Day-8_ <br>
 Local Storage (storing and retrieving data)<br>
@@ -49,11 +48,13 @@ String Manipulation (reversing, splitting, substrings)
 
 _Day-11_<br>
 Regular Expressions (basic pattern matching)<br>
-Math Functions (Math.random, Math.floor, etc.)<br>
 Document Object Model (DOM) Traversal<br>
 
 
 _Day-12_<br>
+DOM Manipulation (selecting elements, modifying content)<br>
+Event Handling (click, submit, keypress, etc.)<br>
+Form Validation (basic form validation using JavaScript)<br>
 Creating Dynamic Elements
 Working with Forms (reading and setting form values)
 Mouse Events (mouseover, mouseout, etc.)
