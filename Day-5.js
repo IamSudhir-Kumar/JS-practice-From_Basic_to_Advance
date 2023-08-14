@@ -8,16 +8,24 @@
 
 // 1. **Reverse a String:**
 //    Write a program that takes a string as input and outputs the reverse of that string.
+const a = prompt("Write any thing");
+const b = a.split("").reverse().join("");
+document.getElementById("demo").innerHTML = b;
 
 // 2. **Count Vowels and Consonants:**
 //    Create a program that takes a string as input and counts the number of vowels and consonants.
+const c = a.match(/[aeiouAEIOU]/g)?.length || 0;
+const d = a.match(/[a-zA-Z]/g)?.length - c || 0;
+document.getElementById("demo1").innerHTML = c;
+document.getElementById("demo2").innerHTML = d;
 
 // 3. **Check Palindrome:**
 //    Implement a program that checks if a given string is a palindrome (reads the same forwards and backwards).
 
 // 4. **Capitalize Words:**
 //    Write a program that takes a sentence as input and capitalizes the first letter of each word.
-
+const e = a.toUpperCase();
+document.getElementById("demo3").innerHTML = e;
 // 5. **String Encryption:**
 //    Create a program that encrypts a string by shifting the characters by a certain number of positions in the alphabet.
 
