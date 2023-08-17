@@ -59,20 +59,20 @@ const info = {
 // 1. Define a constructor function for creating a Car object with properties like make, model, and year.
 /* // 2. Create instances of Car using the constructor function and display their details.*/
 
-function Car ( name , model, year) {
+function Car (name, model, year) {
   this.name = name;
   this.model = model;
   this.year = year;
 }
-const nEwcar = new Car( "merc", "atg", 2015);
+const myCar = new Car( "Merc", "mgt", 2015);
 document.getElementById("demo").innerHTML = 
-  `Name: ${nEwcar.name}<br>
-  Model: ${nEwcar.model}<br>
-  Year: ${nEwcar.year}<br>`
+  `Name : ${myCar.name}<br>
+  MOdel : ${myCar.model}<br>
+  Year: ${myCar.year}<br>`
     
 // 3. Implement a program that adds a method to the Car prototype to calculate the age of the car.
-Car.prototype.calculate =  function(){
+Car.prototype.cal = function() {
   const currentYear = new Date().getFullYear();
   return currentYear - this.year;
 }
-console.log(nEwcar.calculate());
+alert(myCar.cal());
