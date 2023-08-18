@@ -1,9 +1,4 @@
 // Day-5
-// String Manipulation (reversing, splitting, substrings)
-// JSON Manipulation (parse, stringify)
-// Math Functions (Math.random, Math.floor, etc.)
-// Certainly! Here are some basic programs to help you master the topics of String Manipulation, JSON Manipulation, and Math Functions:
-
 // **String Manipulation:**
 
 // 1. **Reverse a String:**
@@ -43,18 +38,38 @@ document.getElementById("demo3").innerHTML = e;
 // **Math Functions:**
 
 // 1. **Generate Random Numbers:**
-//    Write a program that generates a random number between a specified range using `Math.random()`.
+function generateRandom(min , max){
+    return Math.random() * (max - min) + min;
+  }
+  let e = generateRandom(55, 77);
+  document.getElementById("demo").innerHTML = e;
 
 // 2. **Round Numbers:**
 //    Create a program that takes a floating-point number as input and rounds it to the nearest integer using `Math.round()`.
+  let f = parseFloat(prompt("Write your Floatinng-Point Number"));
+  const round = Math.round(f);
+  console.log(round)
 
 // 3. **Calculate Hypotenuse:**
 //    Implement a program that calculates the hypotenuse of a right triangle given the lengths of the two other sides using the Pythagorean theorem and `Math.sqrt()`.
+const a = parseInt(prompt("Enter the First side that you know"));
+const b = parseInt(prompt("Enter the Second side that you know"));
+const hypotenuse = Math.pow(a , 2) + Math.pow(b, 2);
+h = Math.sqrt(hypotenuse);
+document.getElementById("demo").innerHTML = `
+First side = ${a}<br>
+Second side = ${b}<br>
+Hypotenuse = ${h.toFixed(2)}<br>`
 
 // 4. **Calculate Area and Circumference:**
 //    Write a program that calculates the area and circumference of a circle given its radius using `Math.PI` and relevant formulas.
+const a = parseInt(prompt("Enter the Radius"))
+const circumfernce = 2 * Math.PI * a;
+const area = Math.PI * Math.pow(a, 2);
+document.getElementById("demo").innerHTML = `
+Radius = ${a}<br>
+Circumfernce = ${circumfernce.toFixed(2)}<br>
+Area = ${area.toFixed(2)}`
 
 // 5. **Generate Random Password:**
 //    Create a program that generates a random password consisting of letters, numbers, and special characters.
-
-// Remember, the key to mastering these topics is practice. Experiment with different scenarios, modify the programs, and create your own variations. As you work on more complex problems, you'll gain a deeper understanding of how to manipulate strings, work with JSON data, and leverage mathematical functions effectively in your JavaScript code. Happy coding!
