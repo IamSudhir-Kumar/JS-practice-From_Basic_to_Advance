@@ -28,11 +28,14 @@ JSON Manipulation (parse, stringify)<br>
 Math Functions (Math.random, Math.floor, etc.)<br>
 
 _Day-6_ <br>
-Timing Events (setTimeout, setInterval)<br>
-Date and Time Manipulation<br>
+Speard Operator<br>
+Nested Loops<br>
 
 _Day-7_ <br>
 Error Handling (try-catch blocks)<br>
+Timing Events (setTimeout, setInterval)<br>
+Date and Time Manipulation<br>
+
 
 _Day-8_ <br>
 Local Storage (storing and retrieving data)<br>
