@@ -28,9 +28,18 @@ document.getElementById("demo3").innerHTML = e;
 
 // 1. **Parse JSON:**
 //    Write a program that takes a JSON string as input and parses it into a JavaScript object. Then, access and display specific properties from the object.
+const string = `{"Name": "Sudhir" , "Age" : 21, "Gender" : "Male"}`; //JSON string
+const abject = JSON.parse(string); //JSON object
+document.getElementById("demo").innerHTML = `
+<strong>Object</strong> <hr>
+  Name: ${abject.Name}<br>
+  Age: ${abject.Age}<br>
+  Gender: ${abject.Gender}<br>`;
 
 // 2. **Stringify JSON:**
 //    Create an object with various properties and values. Convert the object into a JSON string using the `JSON.stringify()` function.
+const _abject = JSON.stringify(abject);
+document.getElementById("demo1").innerHTML =_abject;
 
 // 3. **Manipulate JSON Data:**
 //    Use parsed JSON data to perform calculations or display specific information. For instance, create a program that calculates the total value of items in a shopping cart.
