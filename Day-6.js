@@ -2,10 +2,21 @@
 
 // 1. **Merge Arrays:**
 //    Given two arrays, merge them using the spread operator and create a new array containing all elements.
-
+let arr1 = [1, 2, 3];
+let arr2 = [4, 5, 6];
+const c = [...arr1, ...arr2]
+document.getElementById("demo").innerHTML = c;
 // 2. **Copy and Modify Object:**
 //    Given an object with properties, create a shallow copy of the object using the spread operator. Then, modify a property in the copied object.
-
+const d={
+    "Name": "Sudhir",
+    "age": 21,
+  }
+ const e = {...d};
+ e.age=20;
+ document.getElementById("demo1").innerHTML = `
+ Name: ${e.Name}<br>
+ Age: ${e.age}`
 // 3. **Pass Arguments:**
 //    Create a function that takes three arguments and returns the sum of those numbers. Use the spread operator to pass an array of numbers to the function.
 
