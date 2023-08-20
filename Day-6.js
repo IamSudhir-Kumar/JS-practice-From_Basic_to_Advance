@@ -1,4 +1,4 @@
-// Certainly! Here are some problems involving the spread operator that can help you understand it better:
+//  spread operator
 
 // 1. **Merge Arrays:**
 //    Given two arrays, merge them using the spread operator and create a new array containing all elements.
@@ -17,32 +17,35 @@ const d={
  document.getElementById("demo1").innerHTML = `
  Name: ${e.Name}<br>
  Age: ${e.age}`
+
 // 3. **Pass Arguments:**
 //    Create a function that takes three arguments and returns the sum of those numbers. Use the spread operator to pass an array of numbers to the function.
+const x = parseInt(prompt("Write a first number"));
+const y = parseInt(prompt("Write a second number"));
+const z = parseInt(prompt("Write a three number"));
+
+function sum(...numbers){
+  return numbers.reduce((total,num) => total + num, 0);
+}
+d = sum(x, y, z);
+document.getElementById("demo").innerHTML = `
+1st Number: ${x}<br>
+2nd Number: ${y}<br>
+3rd Number: ${z}<br>
+Total Sum: ${d}`
 
 // 4. **Clone Array and Append Element:**
 //    Given an array, create a clone of the array and then append an element to the clone using the spread operator.
+const a = [1, 2, 3];
+const b = [...a];
+console.log(Array.isArray(a)); //to check whether its a array or not
+b.push(4);
+console.log(b);
+document.getElementById("demo").innerHTML = `
+Original Array: ${a}<br>
+Array after appending: ${b}`
 
-// 5. **Combine Object Properties:**
-//    Given two objects with properties, combine them into a single object using the spread operator.
-
-// 6. **Remove Element from Array:**
-//    Given an array and an element, create a new array that excludes the specified element using the spread operator.
-
-// 7. **Insert Element in the Middle of Array:**
-//    Given an array and an element, insert the element in the middle of the array using the spread operator.
-
-// 8. **Replace Element in Array:**
-//    Given an array and an element to replace, create a new array where the specified element is replaced by a new element using the spread operator.
-
-// 9. **Clone Array of Objects:**
-//    Given an array of objects, create a clone of the array and then modify a property in one of the objects using the spread operator.
-
-// 10. **Combine Multiple Arrays:**
-//     Given multiple arrays, combine them all into a single array using the spread operator.
-
-// These problems cover various scenarios where the spread operator can be used effectively. Try solving these problems, and it will give you practical experience with the spread operator and its applications in different contexts.
-// Sure, here are some nested loop problems that range from basic to more advanced. Working on these problems will help you master the concept of nested loops:
+// nested loop problems
 
 // ### Basic Level:
 
