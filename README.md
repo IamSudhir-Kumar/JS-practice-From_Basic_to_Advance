@@ -58,8 +58,10 @@ _Day-12_<br>
 DOM Manipulation (selecting elements, modifying content)<br>
 Event Handling (click, submit, keypress, etc.)<br>
 Form Validation (basic form validation using JavaScript)<br>
-Creating Dynamic Elements
-Working with Forms (reading and setting form values)
+
+_Day-13_<br>
+Creating Dynamic Elements<br>
+Working with Forms (reading and setting form values)<br>
 Mouse Events (mouseover, mouseout, etc.)
 Keyboard Events (keydown, keyup, etc.)
 Handling CSS Classes with JavaScript
