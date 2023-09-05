@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async JS</title>
+</head>
+<body>
+    <h1>NEW Exercise</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let a =new Date;
+    const sayNew = function(){
+        console.log(a.getFullYear());
+    }
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "Happy Teachers Day";
+    }
+    const change = setTimeout(changeText,2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(change)
+        console.log("ruk")
+    })
+    setTimeout(sayNew, 2000);
+</script>
+</html>
