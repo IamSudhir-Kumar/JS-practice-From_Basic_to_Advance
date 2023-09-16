@@ -10,26 +10,31 @@ class MyClass {
 */
 /// only camel case is used in Class
 class AdmitBoys {
-    submit() {
-        alert(`${this.name} Your ${this.numberBoys} boys is admitted`)
-    }
-    cancel() {
-        alert(`${this.name} Your ${this.numberBoys} boys is detained`)
-    }
-    give(giveNname , numberBoys){ 
-        this.name = giveNname 
-        this.numberBoys = numberBoys
-    }
+  submit() {
+    alert(`${this.name} Your ${this.numberBoys} boys is admitted`);
+  }
+  cancel() {
+    alert(`${this.name} Your ${this.numberBoys} boys is detained`);
+  }
+  give(giveNname, numberBoys) {
+    this.name = giveNname;
+    this.numberBoys = numberBoys;
+  }
 }
 
-let westDelhi = new AdmitBoys()
-westDelhi.give("Sagarpur" , 2)
+let westDelhi = new AdmitBoys();
+westDelhi.give("Sagarpur", 2);
 
-let delhiCantt = new AdmitBoys()
-delhiCantt.give("Kabul line" , 4)
+let delhiCantt = new AdmitBoys();
+delhiCantt.give("Kabul line", 4);
+///playing with setTimrout and setInterval
+setTimeout((
+) => {
+  delhiCantt.submit();
+  westDelhi.cancel();
+}, 4000);
 
-westDelhi.submit();
-westDelhi.cancel();
-
-delhiCantt.submit();
-delhiCantt.cancel();
+setTimeout(() => {
+  westDelhi.submit();
+  delhiCantt.cancel();
+}, 5000);
