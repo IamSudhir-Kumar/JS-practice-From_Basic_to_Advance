@@ -18,3 +18,32 @@ async function handlePromise(){
     console.log(car);
 }
 handlePromise();
+
+//Using both Asyn-await
+const p1 = new Promise((resolve , reject) => {
+  setTimeout(() => {
+    resolve("First time with promise");
+  } , 10000)
+});
+async function wayPromise() {
+  console.log(await p1);
+  //JS engine will wait here to promise to be resolved
+}
+wayPromise();
+//What happens if we use two promises together in a single function with two different time-out
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Second Time with promise but different time out")
+  } , 4000)
+});
+const p3 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    resolve("Third Time with promise but different time out")
+  } , 2000)
+});
+async function youPromise(){
+  console.log(await p2);
+  console.log(await p3);
+}
+youPromise()
