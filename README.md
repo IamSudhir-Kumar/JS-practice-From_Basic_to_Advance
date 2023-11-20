@@ -37,7 +37,6 @@ Error Handling (try-catch blocks)<br>
 Timing Events (setTimeout, setInterval)<br>
 Date and Time Manipulation<br>
 
-
 _Day-8_ <br>
 Local Storage (storing and retrieving data)<br>
 AJAX with Fetch API (making API requests)<br>
@@ -53,7 +52,6 @@ String Manipulation (reversing, splitting, substrings)
 _Day-11_<br>
 Regular Expressions (basic pattern matching)<br>
 Document Object Model (DOM) Traversal<br>
-
 
 _Day-12_<br>
 DOM Manipulation (selecting elements, modifying content)<br>
