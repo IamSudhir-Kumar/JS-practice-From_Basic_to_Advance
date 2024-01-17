@@ -1,1 +1,1 @@
-Some questions are here for Tasks of Sharpner
+ for Tasks of Sharpner
