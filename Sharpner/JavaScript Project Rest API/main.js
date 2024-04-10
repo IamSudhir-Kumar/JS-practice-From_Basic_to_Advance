@@ -9,7 +9,7 @@ function addNewExpense(e){
 
     }
     console.log(expenseDetails)
-    axios.post('https://crudcrud.com/api/937b3b2034914a4bb6c5a67627bab6a0/orders',expenseDetails )
+    axios.post('https://crudcrud.com/api/bcae3365bf0a41da9388e143a206f2da/orders',expenseDetails )
         .then((response) => {
     localStorage.setItem(expenseDetails.orderId, JSON.stringify(expenseDetails))
     
@@ -21,7 +21,7 @@ function addNewExpense(e){
 
 
 window.addEventListener('DOMContentLoaded', ()=> {
-    axios.get('https://crudcrud.com/api/937b3b2034914a4bb6c5a67627bab6a0/orders')
+    axios.get('https://crudcrud.com/api/bcae3365bf0a41da9388e143a206f2da/orders')
     .then(response => {
             response.data.expenses.forEach(expense => {
 
@@ -53,4 +53,7 @@ function deleteExpense(e, expenseid) {
 function removeExpensefromUI(expenseid){
     const expenseElemId = `expense-${expenseid}`;
     document.getElementById(expenseElemId).remove();
+}
+function showError(error) {
+    console.error("An error occurred:", error);
 }
