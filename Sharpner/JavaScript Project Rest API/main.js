@@ -1,89 +1,101 @@
+// Function to handle adding a new expense
 function addNewExpense(e) {
+    // Prevent form submission
     e.preventDefault();
-
+  
+    // Get expense details from the form
     const expenseDetails = {
-        expenseamount: e.target.expenseamount.value,
-        description: e.target.description.value,
-        category: e.target.category.value,
-        orderId: e.target.orderId.value
+      expenseamount: e.target.expenseamount.value,
+      description: e.target.description.value,
+      category: e.target.category.value,
+      orderId: e.target.orderId.value,
     };
-
-    axios.post('https://crudcrud.com/api/a7fae6d7b35d4dfe9eff65b4d1dca482/orders', expenseDetails)
-        .then((response) => {
-            // Store expenseDetails in localStorage
-            storeExpenseInLocalStorage(expenseDetails);
-
-            addNewExpensetoUI(expenseDetails);
-        })
-        .catch(err => showError(err));
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-    axios.get('https://crudcrud.com/api/a7fae6d7b35d4dfe9eff65b4d1dca482/orders')
-        .then(response => {
-            response.data.expenses.forEach(expense => {
-                addNewExpensetoUI(expense);
-            });
-        })
-        .catch(err => showError(err));
-
-    // Retrieve data from localStorage and add to UI
+  
+    // Send expense details to the server
+    axios.post("https://crudcrud.com/api/a7fae6d7b35d4dfe9eff65b4d1dca482/orders", expenseDetails)
+      .then((response) => {
+        // Store expense details in localStorage
+        storeExpenseInLocalStorage(expenseDetails);
+  
+        // Add the new expense to the UI
+        addNewExpensetoUI(expenseDetails);
+      })
+      .catch((err) => showError(err));
+  }
+  
+  // Function to load expenses when the page loads
+  window.addEventListener("DOMContentLoaded", () => {
+    // Fetch expenses from the server
+    axios.get("https://crudcrud.com/api/a7fae6d7b35d4dfe9eff65b4d1dca482/orders")
+      .then((response) => {
+        // Add each expense to the UI
+        response.data.expenses.forEach((expense) => {
+          addNewExpensetoUI(expense);
+        });
+      })
+      .catch((err) => showError(err));
+  
+    // Load expenses from localStorage and add them to the UI
     for (let i = 0; i < localStorage.length; i++) {
-        const key = localStorage.key(i);
-        const expense = JSON.parse(localStorage.getItem(key));
-        addNewExpensetoUI(expense);
+      const key = localStorage.key(i);
+      const expense = JSON.parse(localStorage.getItem(key));
+      addNewExpensetoUI(expense);
     }
-});
-
-function addNewExpensetoUI(expense) {
+  });
+  
+  // Function to add a new expense to the UI
+  function addNewExpensetoUI(expense) {
+    // Find the parent element based on the expense category
     const parentElement = document.getElementById(expense.category);
-    const expenseElemId = `expense-${expense.orderId}_${expense.category}`; // Updated ID
+  
+    // Generate a unique ID for the expense element
+    const expenseElemId = `expense-${expense.orderId}_${expense.category}`;
+  
+    // Create HTML for the expense element
     parentElement.innerHTML += `
-        <li id=${expenseElemId}>
-            ${expense.expenseamount} - ${expense.category} - ${expense.description}
-            <button onclick='deleteExpense(event, "${expense.orderId}_${expense.category}")'> <!-- Updated ID -->
-                Delete Product
-            </button>
-        </li>`;
-}
-
-
-function deleteExpense(e, expenseid) {
-    console.log("Deleting:", expenseid);
+      <li id=${expenseElemId}>
+        ${expense.expenseamount} - ${expense.category} - ${expense.description}
+        <button onclick='deleteExpense(event, "${expense.orderId}_${expense.category}")'>
+          Delete Product
+        </button>
+      </li>`;
+  }
+  
+  // Function to handle deleting an expense
+  function deleteExpense(e, expenseid) {
+    // Remove the expense element from the UI
     removeExpensefromUI(expenseid);
-    
-    // Check if the item exists in localStorage with the given ID
+  
+    // Check if the expense exists in localStorage
     const existingData = localStorage.getItem(expenseid);
-    console.log("Existing Data:", existingData);
     if (existingData) {
-        // If item with the given ID exists, remove it from localStorage
-        localStorage.removeItem(expenseid);
+      // If the expense exists, remove it from localStorage
+      localStorage.removeItem(expenseid);
     } else {
-        // If item with the given ID doesn't exist, check for an item with the same order ID but different category
-        const parts = expenseid.split('_');
-        console.log("Parts:", parts);
-        if (parts.length > 1) {
-            const orderId = parts[0];
-            const category = parts.slice(1).join('_');
-            console.log("Deleting by Order ID and Category:", orderId, category);
-            localStorage.removeItem(`${orderId}_${category}`);
-        }
+      // If the expense doesn't exist, check for an item with the same order ID but different category
+      const parts = expenseid.split("_");
+      if (parts.length > 1) {
+        const orderId = parts[0];
+        const category = parts.slice(1).join("_");
+        localStorage.removeItem(`${orderId}_${category}`);
+      }
     }
-}
-
-
-
-
-function removeExpensefromUI(expenseid) {
+  }
+  
+  // Function to remove an expense element from the UI
+  function removeExpensefromUI(expenseid) {
     const expenseElemId = `expense-${expenseid}`;
     document.getElementById(expenseElemId).remove();
-}
-
-function showError(error) {
+  }
+  
+  // Function to show error messages
+  function showError(error) {
     console.error("An error occurred:", error);
-}
-
-function storeExpenseInLocalStorage(expenseDetails) {
+  }
+  
+  // Function to store expense details in localStorage
+  function storeExpenseInLocalStorage(expenseDetails) {
     const expenseKey = `${expenseDetails.orderId}_${expenseDetails.category}`;
     localStorage.setItem(expenseKey, JSON.stringify(expenseDetails));
-}
+  }
+  
