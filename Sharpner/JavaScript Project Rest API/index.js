@@ -7,7 +7,7 @@ form.addEventListener("submit", (e) => {
     const item = e.target.item.value;
     const category = e.target.category.value;
     const order = { price: price, item: item, category: category };
-    axios.post("https://crudcrud.com/api/d62f55f442de47058f6b9c8c7f5eafbc/orders", order)
+    axios.post("https://crudcrud.com/api/38ba00b002f04a6796ed06f44d680b02/orders", order)
         .then((response) => {
             addToList(response.data);
             updateTotalPrice();
@@ -19,7 +19,7 @@ form.addEventListener("submit", (e) => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    axios.get("https://crudcrud.com/api/d62f55f442de47058f6b9c8c7f5eafbc/orders")
+    axios.get("https://crudcrud.com/api/38ba00b002f04a6796ed06f44d680b02/orders")
         .then((response) => {
             for (var i = 0; i < response.data.length; i++) {
                 showOrders(response.data[i]);
@@ -62,7 +62,7 @@ function createItemList(listId) {
 }
 
 function handleDelete(id) {
-    axios.delete(`https://crudcrud.com/api/d62f55f442de47058f6b9c8c7f5eafbc/orders/${id}`)
+    axios.delete(`https://crudcrud.com/api/38ba00b002f04a6796ed06f44d680b02/orders/${id}`)
         .then(() => {
             const parentNode = document.getElementById(id);
             parentNode.remove();
