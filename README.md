@@ -1,7 +1,7 @@
 # JS-practice-From_Basic_to_Advance
 This repository is for practicing and mastering JavScript from basic to advance 
 with DSA and OOP with JavaScript (mostly hards parts of JavaScript)
-Content of this repository from day-1 to day-30
+Content of this repository from day-1 to day-30....
 <hr>
 
 _Day-1_<br>
