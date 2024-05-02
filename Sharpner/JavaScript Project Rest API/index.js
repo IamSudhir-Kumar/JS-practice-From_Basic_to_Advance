@@ -81,3 +81,22 @@ function updateTotalPrice() {
     });
     totalPriceDisplay.textContent = total.toFixed(2);
 }
+
+
+// basic promise
+
+/* 
+In simple terms Promises are objects which represents the eventual completion
+or failure of an asynchronus operation 
+*/
+
+const habit = new Promise((resolve , reject) =>{
+    resolve("hello world")
+})
+
+habit
+.then((result) => {
+    console.log(result)
+})
+
+
