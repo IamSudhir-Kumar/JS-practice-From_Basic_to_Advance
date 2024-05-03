@@ -7,28 +7,55 @@ form.addEventListener("submit", (e) => {
     const item = e.target.item.value;
     const category = e.target.category.value;
     const order = { price: price, item: item, category: category };
-    axios.post("https://crudcrud.com/api/38ba00b002f04a6796ed06f44d680b02/orders", order)
-        .then((response) => {
-            addToList(response.data);
-            updateTotalPrice();
-        })
-        .catch((err) => {
-            console.log(err);
-        });
+
+    async function postData(url , data){
+        try{
+            const response = await axios.post(url , data)
+            addToList(response.data)
+            updateTotalPrice()
+        }
+        catch(error){
+            console.log(error)
+        }
+    }
+
+    postData("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders" , order)
+    // axios.post("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders", order)
+    //     .then((response) => {
+    //         addToList(response.data);
+    //         updateTotalPrice();
+    //     })
+    //     .catch((err) => {
+    //         console.log(err);
+    //     });
 
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    axios.get("https://crudcrud.com/api/38ba00b002f04a6796ed06f44d680b02/orders")
-        .then((response) => {
-            for (var i = 0; i < response.data.length; i++) {
-                showOrders(response.data[i]);
+
+    async function getData(url){
+        try{
+            const response = await axios.get(url)
+            for(let i = 0; i<response.data.length; i++){
+                showOrders(response.data[i])
             }
             updateTotalPrice();
-        })
-        .catch((err) => {
-            console.log(err);
-        })
+        } catch(error){
+            console.log(error)
+        }
+    }
+
+    getData("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders")
+    // axios.get("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders")
+    //     .then((response) => {
+    //         for (var i = 0; i < response.data.length; i++) {
+    //             showOrders(response.data[i]);
+    //         }
+    //         updateTotalPrice();
+    //     })
+    //     .catch((err) => {
+    //         console.log(err);
+    //     })
 });
 
 function addToList(order) {
@@ -61,17 +88,17 @@ function createItemList(listId) {
     return parentNode;
 }
 
-function handleDelete(id) {
-    axios.delete(`https://crudcrud.com/api/38ba00b002f04a6796ed06f44d680b02/orders/${id}`)
-        .then(() => {
-            const parentNode = document.getElementById(id);
-            parentNode.remove();
-            updateTotalPrice();
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-}
+async function handleDelete(id) {
+    try {
+      await axios.delete(`https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders/${id}`);
+      const parentNode = document.getElementById(id);
+      parentNode.remove();
+      updateTotalPrice();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
 
 function updateTotalPrice() {
     let total = 0;
