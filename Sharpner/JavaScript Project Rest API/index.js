@@ -8,54 +8,29 @@ form.addEventListener("submit", (e) => {
     const category = e.target.category.value;
     const order = { price: price, item: item, category: category };
 
-    async function postData(url , data){
-        try{
-            const response = await axios.post(url , data)
-            addToList(response.data)
-            updateTotalPrice()
-        }
-        catch(error){
-            console.log(error)
-        }
-    }
-
-    postData("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders" , order)
-    // axios.post("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders", order)
-    //     .then((response) => {
-    //         addToList(response.data);
-    //         updateTotalPrice();
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //     });
+    axios.post("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders", order)
+        .then((response) => {
+            addToList(response.data);
+            updateTotalPrice();
+        })
+        .catch((err) => {
+            console.log(err);
+        });
 
 });
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    async function getData(url){
-        try{
-            const response = await axios.get(url)
-            for(let i = 0; i<response.data.length; i++){
-                showOrders(response.data[i])
+    axios.get("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders")
+        .then((response) => {
+            for (var i = 0; i < response.data.length; i++) {
+                showOrders(response.data[i]);
             }
             updateTotalPrice();
-        } catch(error){
-            console.log(error)
-        }
-    }
-
-    getData("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders")
-    // axios.get("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders")
-    //     .then((response) => {
-    //         for (var i = 0; i < response.data.length; i++) {
-    //             showOrders(response.data[i]);
-    //         }
-    //         updateTotalPrice();
-    //     })
-    //     .catch((err) => {
-    //         console.log(err);
-    //     })
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 });
 
 function addToList(order) {
@@ -109,21 +84,5 @@ function updateTotalPrice() {
     totalPriceDisplay.textContent = total.toFixed(2);
 }
 
-
-// basic promise
-
-/* 
-In simple terms Promises are objects which represents the eventual completion
-or failure of an asynchronus operation 
-*/
-
-const habit = new Promise((resolve , reject) =>{
-    resolve("hello world")
-})
-
-habit
-.then((result) => {
-    console.log(result)
-})
 
 
