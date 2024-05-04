@@ -8,7 +8,7 @@ form.addEventListener("submit", (e) => {
     const category = e.target.category.value;
     const order = { price: price, item: item, category: category };
 
-    axios.post("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders", order)
+    axios.post("https://crudcrud.com/api/27adb51996aa46e985c07b8ae1474f38/orders", order)
         .then((response) => {
             addToList(response.data);
             updateTotalPrice();
@@ -21,7 +21,7 @@ form.addEventListener("submit", (e) => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    axios.get("https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders")
+    axios.get("https://crudcrud.com/api/27adb51996aa46e985c07b8ae1474f38/orders")
         .then((response) => {
             for (var i = 0; i < response.data.length; i++) {
                 showOrders(response.data[i]);
@@ -65,7 +65,7 @@ function createItemList(listId) {
 
 async function handleDelete(id) {
     try {
-      await axios.delete(`https://crudcrud.com/api/7e7df32b3eeb4d6e9c7e947272c10df0/orders/${id}`);
+      await axios.delete(`https://crudcrud.com/api/27adb51996aa46e985c07b8ae1474f38/orders/${id}`);
       const parentNode = document.getElementById(id);
       parentNode.remove();
       updateTotalPrice();
@@ -76,6 +76,7 @@ async function handleDelete(id) {
   
 
 function updateTotalPrice() {
+    console.log(total)
     let total = 0;
     const orders = document.querySelectorAll("#orders ul li");
     orders.forEach(order => {
