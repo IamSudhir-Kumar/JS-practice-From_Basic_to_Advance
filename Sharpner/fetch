@@ -1,0 +1,15 @@
+async function fetchData(url) {
+  try {
+    const response = await fetch(url); // Await the fetch call
+    if (!response.ok) { // Check if the response is okay (status code 200-299)
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    const data = await response.json(); // Await the parsing of JSON
+    console.log(data); // Do something with the data
+  } catch (error) {
+    console.error('Error:', error); // Handle any errors
+  }
+}
+
+// Call the async function with the URL
+fetchData('https://swapi.dev/api/films');
